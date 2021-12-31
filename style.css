@@ -1,0 +1,779 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+html{
+  scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto' , sans-serif;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: #f2f2f2;
+}
+/* navigation bar */
+.nav-back{
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  opacity: 0.8;
+  
+ 
+    
+}
+.navbar-brand{
+    color: black;
+    font-weight:bold ;
+    font-size: 70px;
+    
+}
+.navbar-brand:hover{
+    color: white;
+}
+.nav-link{
+    color:black;
+}
+.nav-link:hover{
+    color: white;
+}
+.navbar-toggler{
+    outline: none!important;
+}
+@media screen and (max-width:750px){
+  .navbar-brand{
+    font-size: 15px;
+  }
+
+}
+/* end of navigation baar */
+
+
+/* background image */
+#hero{
+    width: 100%;
+    height: 80vh;
+    background: url(images/bg.jpg) center;
+    background-size: cover;
+
+    background-position: center;
+	background-repeat:no-repeat;
+    transition: 0s;
+	animation-name:animate;
+	animation-direction: alternate-reverse;
+	animation-duration: 30s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	animation-timing-function: ease-in-out;
+}
+@keyframes animate{
+	0%{
+		background-image: url(images/bg0.jpg);
+	}
+  10%{
+		background-image: url(images/bg6.jpg);
+	}
+	20%
+	{
+	background-image: url(images/bg3.jpg);
+}
+40%
+{
+	background-image: url(images/bg4.jpg);
+}
+60%
+{
+	background-image: url(images/bg5.jpg);
+}
+70%
+{
+	background-image: url(images/freepressjournal_import_2017_04_Atithi_Devo_Bhava.jpg);
+}
+80%
+{
+	background-image: url(images/bg1.jpg);
+}
+90%{
+  background-image: url(images/bg8.jpg);
+}
+100%{
+	background-image: url(images/bg7.jpg);
+}
+}
+#hero .container{
+    padding-top: 80px;
+}
+#hero:before{
+    content: "";
+    background:rgba(0,0,0,0.5); 
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80vh;
+}
+#hero h1{
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: bold;
+    line-height:56px;
+    color: white;
+}
+#hero h2{
+    color:  white;
+    margin-bottom:40px;
+    font-size: 15px;
+    font-weight: light;
+    letter-spacing: 0.5px;
+}
+.main-btn{
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    padding:8px 28px;
+    border-radius:50px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid white;
+    color: white;
+}
+.main-btn:hover{
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+    border:2px solid skyblue;
+    text-decoration: none;
+    color: white;
+
+}
+/* end of backround image */
+
+
+/* about us */  
+  .aboutus h2:hover{
+    color: blue;
+  }
+   .about-section{
+     margin-top: 5rem;
+     margin-bottom: 5rem;
+ 
+   }
+   .about-heading{
+     text-transform: uppercase;
+   }
+   .about-heading-upper{
+     display: block;
+     font-size: 1rem;
+     font-weight: bold;
+   }
+   .about-heading-lower{
+     display: block;
+     font-size: 38px;
+     font-weight: light;
+   }
+   .bg-faded{
+     background: linear-gradient(-135deg, #c850c0, #4158d0);
+     opacity: 0.8;
+     color: white;
+   }
+   .about-button .btn-color{
+     background: #03a59a;
+     color: white;
+     font-weight: bold;
+ 
+   }
+   .about{
+     position: relative;
+   }
+   @media screen and (min-width:992px){
+     .about .about-img{
+       width: 75%;
+       float: right;
+ 
+     }
+     .about .about-text{
+       left: 0;
+       width: 60%;
+       margin-top: 5rem;
+       position: absolute;
+     }
+     .about .about-text .about-button{
+       width: 100%;
+       left: 0;
+       position: absolute;
+       bottom: -2rem;
+     }
+   }
+   @media screen and(min-width:1200px){
+     .about .about-text{
+       width: 45%;
+     }
+   }
+ /* end of about us */
+
+
+/* services */
+.services h2:hover{
+  color: blue;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: #f2f2f2;
+  }
+  .wrapper{
+    display: grid;
+    margin: 100px 90px auto;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  @media (max-width: 700px) {
+    .wrapper{
+      margin: 200px auto;
+    }
+  }
+  .wrapper .box{
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+  }
+  .wrapper .box .front-face{
+    background: #fff;
+    height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+    transition: all 0.5s ease;
+  }
+  .box .front-face .icon{
+    height: 80px;
+  }
+  .box .front-face .icon i{
+    font-size: 65px;
+    position: absolute;
+    left : 50%;
+    
+    transform: translate(-50%, -50%);
+  }
+  .box .front-face .icon img{
+    font-size: 65px;
+    position: absolute;
+    left : 50%;
+ 
+    transform: translate(-50%, -50%);
+  }
+  .box .front-face span,
+  .box .back-face span{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .box .front-face .icon i,
+  .box .front-face span{
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .box .back-face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 220px;
+    width: 100%;
+    padding: 30px;
+    color: #fff;
+    opacity: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transform: translateY(110px) rotateX(-90deg);
+    box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+    transition: all 0.5s ease;
+  }
+  .box .back-face p{
+    margin-top: 10px;
+    text-align: justify;
+  }
+  .box:hover .back-face{
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  .box:hover .front-face{
+    opacity: 0;
+    transform: translateY(-110px) rotateX(90deg);
+  }
+
+
+
+  /* indias best organ transplant surgeons SECTION */
+  .team{
+    background:linear-gradient(-135deg, #c850c0, #4158d0);
+    padding-bottom: 15px;
+    
+  }
+  .team .member{
+    position: relative;
+    box-shadow: 1px 2px 15px rgba(242, 247, 246, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+  
+  }
+  .team .member .image{
+    overflow: hidden;
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+  }
+  .team .member .image img{
+    transition: ease-in-out 0.3s;
+  }
+  .team .member:hover img{
+    transform: scale(1.1);
+  }
+  .team .member h4{
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: black;
+ 
+  }
+  .team .member span{
+    display: block;
+    font-size: 15px;
+    padding-bottom:10px;
+    position: relative;
+    font-weight: bold;
+  }
+  .team .member span::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background:white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .team .member p{
+    margin:10px 0 0 0;
+    font-size: 14px;
+  }
+  .team .social{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+  }
+  /* .team .social a{
+    transition: ease-in-out .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    background:#03a59a;
+    margin-left: 8px;
+    
+  } */
+  /* .team .social a i{
+    color: white;
+    font-size: 16px;
+    margin: 0 2px;
+  }
+  .team .social a:hover{
+    background: black;
+  } */
+  
+  .team .social a{
+    background-color:#03a59a;
+    color: black;
+    border-radius: 5px;  
+    text-decoration: none;
+    padding: 8px;
+    color: white;
+    
+  }
+  .team .social a:hover{
+    color: black;
+  }
+
+  
+  /* END OF indias best organ transplant section*/
+
+
+
+  /* contact us */
+  .contact h1{
+    text-align: center;
+    text-transform: uppercase;
+  }
+ 
+  .contact-wrap{
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    margin-top: 130px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .contact-in{
+    padding: 40px 30px;
+  }
+  .contact-in:nth-child(1) {
+    flex: 30%;
+    background-size: cover;
+    color:#000;
+  }
+  .contact-in:nth-child(2) {
+    flex: 45%;
+    background: #03a59a;
+  }
+  .contact-in:nth-child(3) {
+    flex: 25%;
+    padding: 0;
+  }
+  .contact-in h1{
+    font-size: 24px;
+    color:black;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .contact-in h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  .contact-in h2 i{
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);;
+    color: #000;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .contact-in p{
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .contact-in ul {
+    margin: 0;
+    padding: 0;
+  }
+  .contact-in ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+  .contact-in ul li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background:linear-gradient(-135deg, #c850c0, #4158d0);
+    border-radius: 50px;
+  }
+  .contact-in ul li a i{
+    font-size: 14px;
+    line-height: 30px;
+    color: #000;
+  }
+  .contact-in form{
+    width: 100%;
+    height: auto;
+  }
+  .contact-in-input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border:1px solid black;
+    outline: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    background: transparent;
+    color: black;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'poppins', sans-serif;
+  }
+  .contact-in-input::placeholder{
+    color:white;
+  }
+  .contact-in-textarea{
+    width: 100%;
+    height: 140px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    border:1px solid black;
+    outline: none;
+    padding-left: 5px;
+    background: transparent;
+    color: black;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'poppins', sans-serif;
+  }
+  .contact-in-textarea::placeholder{
+    color: white;
+  }
+  .contact-in-btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border:1px solid black;
+    outline: none;
+    background: transparent;
+    color:white;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'poppins', sans-serif;
+    cursor: pointer;
+  }
+  
+  .contact-in iframe{
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width:480px) {
+
+  .contact-in:nth-child(1)
+  {
+    flex: 50%;
+  }
+ 
+   .contact-in:nth-child(2){
+    flex: 50%;
+  }
+   
+ .contact-in:nth-child(3)
+  {
+    flex: 100%;
+   
+  }
+}
+  
+  @media screen and (max-width:360px) {
+    .contact-in:nth-child(1) {
+    flex: 50%;
+    }
+ .contact-in:nth-child(2) {
+    flex: 50%;
+  }
+  .contact-in:nth-child(3) {
+    flex: 100%;
+   
+  }
+}
+
+
+/* faq section */
+
+#faqs{
+  
+  height: 50%;
+  width: 100%;
+  padding: 50px 0;
+ 
+
+}
+#faqs h1{
+  font-weight: 900;
+  font-size: 34px;
+  text-align: center;
+  padding: 20px 0 50px 0;
+}
+.accordion .card{
+  border-radius:0;
+  background: none;
+  border-left-width:0;
+  border-right-width:0;
+}
+.accordion .card .card-header{
+  background: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 0;
+}
+.accordion .card-header h2{
+  font-size: 1rem;
+}
+.accordion .card-header .btn{
+  color: #03a59a;
+  width: 100%;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+}
+.accordion .card-header i{
+  font-size: 1rem;
+  position: absolute;
+  top: 15px;
+  right: 1rem;
+}
+/* END OF FAQ SECTION */
+
+
+/*counter up section  */
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  
+}
+.counters{
+  background: #03a59a;
+  color: #fff;
+  padding: 40px 20px;
+  border-top: 3ps solid black;
+  margin-top: 15px;
+}
+.counters .container{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(4,1fr);
+  text-align: center;
+}
+.counters i {
+  color: #4158d0;
+  margin-bottom: 5px;
+}
+.counters .counter{
+  font-size: 45px;
+  margin: 10px 0;
+}
+@media(max-width:700px){
+  .counters .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .counters .container > div:nth-of-type(1), .counters .container > div:nth-of-type(2) {
+    border-bottom: 1px lightcoral;
+    padding-bottom: 20px;
+  }
+  }
+
+/*end of counter up section  */
+
+
+
+/* doctoros estimonial section */
+#customers-testimonial{
+  padding: 40px 0;
+}
+.testimonial img{
+  max-width: 159px;
+  margin: 0 auto 0 auto;
+  border: 2px solid goldenrod;
+  padding: 5px;
+  margin-bottom: 13px;
+  border-radius: 50px;
+}
+.testimonial blockquote{
+  border: 0;
+  font-family: tahoma;
+  font-size: italic;
+  color: gray;
+  padding: 5px 150px;
+  position: relative;
+}
+
+.testimonial blockquote:before,
+.testimonial blockquote::after{
+  font-size: 80px;
+  font-size: normal;
+  line-height: 1;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.testimonial blockquote::before{
+  content: "\201C";
+  top: 0;
+  left: 100px;
+}
+
+.testimonial blockquote::after{
+  content: "\201D";
+  bottom: 0;
+  right: 100px;
+}
+.testimonial-author p {
+  color: #c850c0;
+  font-size: 17px;
+}
+.testimonial-author p  strong{
+display: block;
+
+}
+#testimonials h3{
+color: greenyellow;
+text-transform: uppercase;
+}
+
+/* end of doctor testimonial section */
+
+
+/* footer section start */
+.footer{
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+
+}
+.footer p{
+  font-size: 15px;
+  color: white;
+  padding: 1rem 0;
+  margin-left: px;
+}
+.footer .col-md-4:nth-child(1) a span
+{
+  font-size: 3rem;
+  color: white;
+
+}
+.footer a{
+  font-size: 1rem;
+  color:black;
+  display: block;
+  text-decoration: none;
+}
+footer h3{
+  color: white;
+  font-size: 3rem;
+}
+.footer a:hover{
+  color: white;
+  text-decoration: none;
+}
+.footer .credit{
+  color: white;
+  width: 80%;
+  margin: 0;
+  padding: 2rem 0;
+  padding-bottom: 4rem;
+  border-top: .1rem solid rgb(235, 232, 232) !important;
+}
+.footer .credit span{
+ color: #03a59a; 
+}
+/* end of footer section */
